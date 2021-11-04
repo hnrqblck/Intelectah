@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20211101000608_Initial.cs" />
+    <Compile Remove="Migrations\20211101000608_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20211101001534_Id.cs" />
+    <Compile Remove="Migrations\20211101001534_Id.Designer.cs" />
+    <Compile Remove="Migrations\20211101001909_Initial.cs" />
+    <Compile Remove="Migrations\20211101001909_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20211101002128_Initial.cs" />
+    <Compile Remove="Migrations\20211101002128_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20211103220725_Initial.cs" />
+    <Compile Remove="Migrations\20211103220725_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20211103221125_Initial.cs" />
+    <Compile Remove="Migrations\20211103221125_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20211103222402_Initial.cs" />
+    <Compile Remove="Migrations\20211103222402_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20211103223512_Initial.cs" />
+    <Compile Remove="Migrations\20211103223512_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20211103232406_Initial.cs" />
+    <Compile Remove="Migrations\20211103232406_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20211104042410_Appointments.cs" />
+    <Compile Remove="Migrations\20211104042410_Appointments.Designer.cs" />
+    <Compile Remove="Migrations\20211104042724_Appointments.cs" />
+    <Compile Remove="Migrations\20211104042724_Appointments.Designer.cs" />
+    <Compile Remove="Migrations\20211104043509_Appointments.cs" />
+    <Compile Remove="Migrations\20211104043509_Appointments.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.20">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+</Project>

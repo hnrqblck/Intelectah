@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - intelectah</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-flatly.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img width="50" height="50" src="data:image/png;base64,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" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Appointments" asp-action="Index">Agendamento</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Patients" asp-action="Index">Pacientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="ExamsTypes" asp-action="Index">Tipos de Exames</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Appointments" asp-action="Index">Exames</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - intelectah
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

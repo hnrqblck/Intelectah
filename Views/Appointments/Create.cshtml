@@ -1,0 +1,52 @@
+﻿@model intelectah.Models.Appointments
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Appointments</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PatientId" class="control-label"></label>
+                <select asp-for="PatientId" class="form-control" asp-items="ViewBag.PatientId">
+                </select>
+                <a asp-controller="Patients" asp-action="Create">Cadastrar Paciente</a>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExamsTypesId" class="control-label"></label>
+                <select asp-for="ExamsTypesId" class="form-control" asp-items="ViewBag.ExamsTypesId">
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExamsId" class="control-label"></label>
+                <select asp-for="ExamsId" class ="form-control" asp-items="ViewBag.ExamsId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="AppointmentTime" class="control-label"></label>
+                <input asp-for="AppointmentTime" class="form-control" />
+                <span asp-validation-for="AppointmentTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Protocol" class="form-control" type="hidden"  value="@(new Random().Next(100000000, 199999999))"/>
+                <span asp-validation-for="Protocol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
